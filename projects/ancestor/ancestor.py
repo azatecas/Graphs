@@ -74,7 +74,6 @@ def earliest_ancestor(ancestors, starting_node):
         graph[pairs[1]] = set()
     for pairs in ancestors:
         graph[pairs[1]].add(pairs[0])
-    # print(graph)
 
 # if the starting node is a not a key of graph, means no parent, return -1
     if starting_node not in graph:
@@ -110,9 +109,4 @@ def earliest_ancestor(ancestors, starting_node):
 
 ancestors = [(1, 3), (2, 3), (3, 6), (5, 6), (5, 7),
              (4, 5), (4, 8), (8, 9), (11, 8), (10, 1)]
-earliest_ancestor(ancestors, 6)
-
-test_ancestors = [(1, 3), (2, 3), (3, 6), (5, 6), (5, 7),
-                  (4, 5), (4, 8), (8, 9), (11, 8), (10, 1)]
-
-print(earliest_ancestor(test_ancestors, 6))
+print(earliest_ancestor(ancestors, 6))
